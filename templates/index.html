@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Voice-Activated Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">Red Bull Chatbot</div>
+    <div id="chatbox" class="chatbox"></div>
+    <div id="microphone" class="microphone">
+        <svg id="microphoneIcon" class="microphone-icon" viewBox="0 0 24 24">
+            <path d="M12 1a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm5 10a5 5 0 0 1-10 0V4a5 5 0 0 1 10 0v7zm-5 11a7 7 0 0 0 7-7h-2a5 5 0 0 1-10 0H5a7 7 0 0 0 7 7zm0-2a5 5 0 0 0 5-5h-2a3 3 0 0 1-6 0H7a5 5 0 0 0 5 5z"/>
+        </svg>
+    </div>
+    <button id="stopButton" class="stop-button">Stop Listening</button>
+    <button id="respondButton" class="respond-button">Respond</button>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

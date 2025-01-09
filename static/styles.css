@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://media1.giphy.com/media/VeGYtq4kReVJmt5XVM/giphy.gif?cid=6c09b952h78ra8i5khdkjrulevkpao4mw1w8z9b5fus6b53u&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+
+span {
+    background: url("https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 6s linear;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      filter: hue-rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -5000%);
+      opacity: 0;
+      filter: hue-rotate(720deg);
+    }
+  }
+.header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chatbox {
+    height: 800px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 1000px;
+}
+
+.start-button, .stop-button, .respond-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.start-button:hover, .stop-button:hover, .respond-button:hover {
+    background-color: #cc0000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.microphone {
+    width: 60px;
+    height: 60px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.microphone.active {
+    background-color: #cc0000;
+    animation: pulse 1s infinite;
+}
+
+.microphone-icon {
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.response-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
